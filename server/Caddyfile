@@ -1,0 +1,32 @@
+localhost:80 {
+	# Set cache preferences
+	header {
+		Cache-Control "no-cache, no-store, must-revalidate"
+		Pragma "no-cache"
+		Expires "0"
+	}
+
+	# Root directory for other requests
+	root * ../web
+	file_server
+
+	# Handle media requests
+	handle_path /media/* {
+		root * ../public
+		file_server
+	}
+
+	# Handle API requests
+	handle_path /api/* {
+		reverse_proxy localhost:3500
+	}
+
+	# Set up loggers
+	log {
+		output file ../logs/kiosk.access.log {
+			roll_size 100MiB
+			roll_keep 2
+			roll_keep_for 360h
+		}
+	}
+}

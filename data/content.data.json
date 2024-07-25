@@ -1,0 +1,41 @@
+{
+    "packing-corridor": [
+        {
+            "contentType": "image",
+            "contentURL": "/media/images/image1.png",
+            "contentConfig": {
+                "imageDuration": 5000
+            }
+        },
+        {
+            "contentType": "image",
+            "contentURL": "/media/images/image2.png",
+            "contentConfig": {
+                "imageDuration": 5000
+            }
+        },
+        {
+            "contentType": "video",
+            "contentURL": "/media/videos/video1.mp4",
+            "contentConfig": {
+                "videoMuted": false
+            }
+        }
+    ],
+    "production-line-3-corridor": [
+        {
+            "contentType": "video",
+            "contentURL": "https://www.example.com/videos/another-video.mp4",
+            "contentConfig": {
+                "videoMuted": true
+            }
+        },
+        {
+            "contentType": "image",
+            "contentURL": "https://www.example.com/images/another-image.jpg",
+            "contentConfig": {
+                "imageDuration": 15000
+            }
+        }
+    ]
+}

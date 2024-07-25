@@ -1,0 +1,4 @@
+logs
+dist
+server/caddy.exe
+src/frontend-app/node_modules
